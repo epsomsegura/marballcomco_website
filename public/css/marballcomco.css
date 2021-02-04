@@ -1,0 +1,213 @@
+html,body{
+    height: 100% !important;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+::-webkit-scrollbar {
+    display: none;
+  }
+
+/* START: HEADER */
+.header{
+    position: fixed;
+    width: 100%s;
+}
+.header > nav.banner_pos{
+    background: rgba(0,0,0,0.25) !important;
+    box-shadow: none !important;
+    -webkit-box-shadow:none !important;
+}
+.header .brand-logo{
+    height: 64px !important;
+    display: flex !important;
+    padding: 5px 10px !important;
+}
+.header .brand-logo>img{
+    margin: auto;
+    height: 80% !important;
+    width: auto !important;
+}
+.sidenav-trigger{
+    color: #1c384e !important;
+}
+.sidenav-trigger > i{
+    font-style: normal;
+}
+.sidenav-overlay{z-index: 1 !important;}
+#menu_options{
+    padding: 0px !important;
+    margin-right: 40px !important;
+}
+#menu_options li{
+    background-color: none !important;
+    padding: 0px 5px !important
+}
+#menu_options li:hover{
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+#menu_options li>a{
+    background-color: transparent !important;
+    display: inline !important;
+    padding: 10px 5px !important;
+}
+#menu_options li>a:hover{    
+    -webkit-transition: none !important;
+    transition: none !important;
+    border-bottom: solid 2px #fff;
+}
+#menu_options li>a.line_fx:hover{    
+    -webkit-transition: none !important;
+    transition: none !important;
+    border-bottom: solid 2px #212121;
+}
+/* END: HEADER */
+
+
+
+
+/* START: LANDING PAGE */
+/* BANNER */
+#scrollTopBtn{
+    position: fixed !important;
+    display: none;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.8;
+    z-index: 100;
+}
+.bannerContainer{
+    height: 100% !important;
+    width: 100% !important;
+    background: url("../img/backgrounds/bg_1.jpg") no-repeat center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logoContainer{
+    margin: auto !important;
+    width: 50% !important;
+    max-width: 500px !important;
+    min-width: 300px !important;
+    text-align: center;
+    color: #212121;
+}
+.logoContainer h1{
+    display: none;
+}
+.logoContainer img{
+    width: 100% !important;
+    height: auto;
+}
+#banner_img_logo:hover{
+    cursor: pointer;
+}
+.logoContainer h2{
+    margin:10px 0px;
+    font-size: 1em;
+}
+.logoContainer #btn_banner_more{
+    padding: 0px 50px; 
+}
+#arrow_down_banner{
+    position: absolute;
+    margin: 0 auto;
+    bottom: 10px;
+}
+/* Parallax */
+.parallax_container{
+    width: 100% !important;
+    height: 250px !important;
+}
+#parallax1{
+    background: url("../img/backgrounds/bg_2.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+#parallax2{
+    background: url("../img/backgrounds/bg_3.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+#parallax3{
+    background: url("../img/backgrounds/bg_4.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+/* GLOBALS */
+#nosotros,
+#productos,
+#clientes{
+    padding-top:64px !important;
+    padding-bottom:64px !important;
+}
+#carrusel_clientes{
+    height: 210px !important;
+    min-height: 210px !important;
+}
+#carrusel_clientes > a.carousel-item,
+#carrusel_clientes > a.carousel-item.active{
+    height: 120px !important;
+    min-height: 120px !important;
+}
+#carrusel_clientes img{
+    height: 120px !important;
+    width: auto !important;
+
+}
+.indicators li{
+    background-color: #1c384e !important;
+}
+#testimonio{
+    border-radius: 2px !important;
+    padding: 20px !important;
+}
+
+/* CONTACTO */
+#map { width: 100%; height: 300px;}
+.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib{opacity: 0 !important;}
+.contact_list > li > svg{
+    animation: jump 0.5s linear infinite;
+    animation-play-state: paused;
+}
+.contact_list > li > svg:hover{
+    cursor: pointer;
+    animation-play-state:running;
+}
+@keyframes jump {
+    0% {margin-bottom:0px;}
+    50% {margin-bottom: 2px;}
+  }
+
+
+/* FOOTER */
+#footer{
+    padding: 20px 100px !important;
+    background-color: #282d32 !important;
+    color: #868d93 !important;
+    font-size: 1em !important;
+}
+.footer_menu a{
+    color: #868d93 !important;
+}
+#footer .row{
+    padding: 10px !important;
+}
+#footer .row>.col{
+    padding:10px 5px !important;
+}
+#footer h5{
+    color: white !important;
+    font-size:medium;
+}
+.contact_bar a{
+    font-size: 2.5em !important;
+    margin: 3px 8px !important;
+    color: #868d93 !important;
+}
+.contact_bar a:hover{
+    color:  white !important;
+}
+
+
+/* END: LANDING PAGE */

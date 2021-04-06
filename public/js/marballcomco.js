@@ -1,3 +1,13 @@
+lib={
+  toasts:function(msg){
+    M.toast({
+      html:msg,
+      classes: 'rounded'
+    });
+  }
+}
+
+
 $(document).ready(function () {
     M.AutoInit();
     AOS.init();

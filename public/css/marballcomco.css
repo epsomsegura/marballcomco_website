@@ -136,7 +136,8 @@ html,body{
 /* GLOBALS */
 #nosotros,
 #productos,
-#clientes{
+#clientes,
+#contacto{
     padding-top:64px !important;
     padding-bottom:64px !important;
 }
@@ -211,3 +212,42 @@ html,body{
 
 
 /* END: LANDING PAGE */
+
+
+/* START: LOGIN VIEW */
+.loginContainer{
+    height: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    background-color: rgb(241, 241, 241) !important;
+}
+.loginCenter{
+    min-width: 350px !important;
+    max-width: 500px !important;
+    width: 50% !important;
+    margin: auto;
+    padding: 0px !important;
+}
+.loginForm{
+    width: 100% !important;
+    background-color: white;
+    padding: 15px;
+}
+.loginLogoContainer > img{
+    width: 70% !important;
+    height: auto;
+}
+/* END: LOGIN VIEW */
+
+
+
+/* START: MY PROFILE */
+#userPhoto{
+    width: 200px !important;
+    height: 200px !important;
+}
+
+#passSection{
+    display: none;
+}
+/* END: MY PROFILE */

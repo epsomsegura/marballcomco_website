@@ -13,7 +13,7 @@
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">Cómputo, video y conmutadores<i class="material-icons right">close</i></span>
-                <p align="justify">Equipo de cómputo de las mejores marcas o ensamblado, conmutadores y equipo para videovigilancia.</p>
+                <p align="justify">{{$PD->productsTechDesc}}</p>
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">Equipo, mobiliario y productos de papelería<i class="material-icons right">close</i></span>
-                <p align="justify">Equipo y mobiliario oficina, salas de espera y espacios en general y productos de papelería.</p>
+                <p align="justify">{{$PD->productsOfficeDesc}}</p>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">Materiales para construcción y remodelación<i class="material-icons right">close</i></span>
-                <p align="justify">Productos para la construcción y remodelación, desde obra negra hasta detalles con productos especializados.</p>
+                <p align="justify">{{$PD->productsBuildDesc}}</p>
             </div>
         </div>
     </div>
@@ -58,7 +58,7 @@
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">Abarrotes y productos de limpieza<i class="material-icons right">close</i></span>
-                <p align="justify">Todo tipo de abarrotes y productos de limpieza para el hogar, oficina o industria.</p>
+                <p align="justify">{{$PD->productsCleanDesc}}</p>
             </div>
         </div>
     </div>

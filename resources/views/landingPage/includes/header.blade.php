@@ -2,7 +2,7 @@
     <nav class="grey lighten-5 banner_pos">
         <div class="nav-wrapper">
             <a href="/#banner" id="logo_menu" class="grey-text text-lighten-4 brand-logo">
-                <img src="{{asset('img/logos/logo_colores.png')}}" alt="">
+                <img src="{{asset('img/logos/logo_colores.png')}}" alt="Logo Marball-Comco">
             </a>
             <a href="#" data-target="mobile" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             <ul id="menu_options" class="right hide-on-med-and-down">

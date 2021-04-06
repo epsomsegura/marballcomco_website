@@ -14,7 +14,7 @@
     <div class="col s12 m12 l12 xl12">
         <p class="center" id="testimonio" data-aos="flip-up">
             <i>
-            "En MAR-BALL COMCO S.A. de C.V., tenemos como finalidad primordial ofrecer un servicio tomando en cuenta los siguientes puntos importantes: calidad, precio, respuesta inmediata, entrega en tiempo y forma, veracidad, asesoría técnica y seriedad."
+            "{{$PD->testimonial}}"
             </i>
         </p>
     </div>

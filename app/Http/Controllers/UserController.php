@@ -57,16 +57,20 @@ class UserController extends Controller
             $user->nickname=$r->nickname;
             $user->email=$r->email;
             $user->updated_at=date('Y-m-d H:i:s');
+            $user->photo = $r->photo;
             if($r->has('password')){
                 $user->password = Hash::make($r->password);
             }
 
+
             DB::BeginTransaction();
             try{
                 $user->save();
-                return \Redirect::To('/dashboard')->with('success','Perfil actualizado exitosamente');
+                DB::commit();
+                return \Redirect::back()->with('success','Perfil actualizado exitosamente');
             }
             catch(\Exception $e){
+                DB::rollback();
                 return \Redirect::back()->withErrors(['error'=>$e->getMessage()]);
             }
         }

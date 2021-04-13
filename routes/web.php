@@ -14,9 +14,9 @@ Route::permanentRedirect('/home','/');
 
 
 // Authentication
-Route::get('/login',[AuthContr::class,'loginView']);
+Route::get('/login',[AuthContr::class,'loginView'])->name('login');
 Route::post('/login',[AuthContr::class,'loginPost']);
-Route::get('/logout',[AuthContr::class,'logoutReq'])->middleware(['auth.basic']);
+Route::get('/logout',[AuthContr::class,'logoutReq'])->middleware(['auth']);
 
 // Dashboard
 Route::get('/dashboard',[Dashboard::class,'dashboard']);
@@ -25,7 +25,7 @@ Route::get('/dashboard',[Dashboard::class,'dashboard']);
 Route::group(['prefix'=>'/user','middleware'=>['auth']],function(){
     // My profile
     Route::get('/myProfile',[User::class,'myProfile']);
-    Route::patch('/myProfile',[User::class,'myProfilePatch']);
+    Route::post('/myProfile',[User::class,'myProfilePatch']);
 });
 
 

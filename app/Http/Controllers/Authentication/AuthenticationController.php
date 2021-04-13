@@ -28,16 +28,11 @@ class AuthenticationController extends Controller
                     $r->session()->regenerate();
                     return redirect()->intended('dashboard');
                 }
-                else
-                    return back()->withErrors(['Error desconocido al iniciar sesión']);
+                else return back()->withErrors(['Error desconocido al iniciar sesión']);
             }
-            else{
-                return back()->withErrors(['La contraseña es incorrecta']);
-            }
+            else return back()->withErrors(['La contraseña es incorrecta']);
         }
-        else{
-            return back()->withErrors(['No existe el usuario en el sistema']);
-        }
+        else return back()->withErrors(['No existe el usuario en el sistema']);
     }
 
     // Proceso para cierre de sesión

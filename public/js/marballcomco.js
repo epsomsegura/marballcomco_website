@@ -4,13 +4,24 @@ lib={
       html:msg,
       classes: 'rounded'
     });
-  }
+  },
+  loader:{
+    show:function(){
+      $('.preloaderContainer').show();
+      $('.preloaderCircleContainer').css({'display':'flex'});
+    },
+    hide:function(){
+      $('.preloaderContainer').hide();
+      $('.preloaderCircleContainer').fadeOut(500);
+    }
+  },
 }
 
 
 $(document).ready(function () {
     M.AutoInit();
     AOS.init();
+    lib.loader.hide();
   
     $('#carrusel_clientes').carousel({
       fullWidth: false,

@@ -21,12 +21,12 @@
             <div class="card-content">
                 <form id="frmMyProfile" action="{{url('/user/myProfile')}}" method="POST">
                     @csrf
-                    @method('PATCH')
+                    <input type="hidden" name="photo" id="photo">
                     <div class="row">
                         <div class="col s12">
                             <div>
                                 <div>
-                                    <img id="userPhoto" src="/img/misc/user.png">
+                                    <img id="userPhoto" data-orig-src="{{Auth::user()->photo===null ? '/img/misc/user.png' : Auth::user()->photo}}" src="{{Auth::user()->photo===null ? '/img/misc/user.png' : Auth::user()->photo}}">
                                 </div>
                             </div>
                         </div>
@@ -34,7 +34,7 @@
                             <div class="file-field input-field">
                                 <div class="btn blue darken-1">
                                     <span>Cargar imagen</span>
-                                    <input type="file">
+                                    <input type="file" id="fileUserPhoto">
                                 </div>
                                 <div class="file-path-wrapper">
                                     <input class="file-path validate" type="text">
@@ -43,12 +43,12 @@
                         </div>
                         <div class="col s12 m3">
                             <div class="input-field col s12 center">
-                                <button class="btn waves-effect waves-light green darken-1">Guardar</button>
+                                <button type="button" id="btnAcceptChangePhoto" class="btn waves-effect waves-light green darken-1">Cambiar</button>
                             </div>
                         </div>
                         <div class="col s12 m3">
                             <div class="input-field col s12 center">
-                                <button class="btn waves-effect waves-light red darken-1">Cancelar</button>
+                                <button type="button" id="btnUndoChangePhoto" class="btn waves-effect waves-light red darken-1">Deshacer</button>
                             </div>
                         </div>
                     </div>
@@ -113,6 +113,7 @@
                     <div class="row">
                         <div class="col s12">
                             <button type="button" id="btnSubmit" class="right btn waves-effect waves-light blue darken-1">Actualizar</button>
+                            <input type="submit" id="submit" hidden/>
                         </div>
                     </div>
                 </form>

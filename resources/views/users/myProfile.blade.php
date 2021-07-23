@@ -26,7 +26,7 @@
                         <div class="col s12">
                             <div>
                                 <div>
-                                    <img id="userPhoto" data-orig-src="{{Auth::user()->photo===null ? '/img/misc/user.png' : Auth::user()->photo}}" src="{{Auth::user()->photo===null ? '/img/misc/user.png' : Auth::user()->photo}}">
+                                    <img id="userPhoto" data-orig-src="{{Auth::user()->photo===null ? '/img/misc/user.png' : Auth::user()->photo}}" src="{{Auth::user()->photo===null ? '/img/misc/user.png' : Auth::user()->photo}}" title="Imagen de perfil del usuario">
                                 </div>
                             </div>
                         </div>
@@ -43,37 +43,37 @@
                         </div>
                         <div class="col s12 m3">
                             <div class="input-field col s12 center">
-                                <button type="button" id="btnAcceptChangePhoto" class="btn waves-effect waves-light green darken-1">Cambiar</button>
+                                <button type="button" id="btnAcceptChangePhoto" class="btn waves-effect waves-light green darken-1" title="Seleccionar recorte de imagen de perfil de usuario">Cambiar</button>
                             </div>
                         </div>
                         <div class="col s12 m3">
                             <div class="input-field col s12 center">
-                                <button type="button" id="btnUndoChangePhoto" class="btn waves-effect waves-light red darken-1">Deshacer</button>
+                                <button type="button" id="btnUndoChangePhoto" class="btn waves-effect waves-light red darken-1" title="Cancelar selección y recorte de imagen de perfil de usuario">Deshacer</button>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12 m6 l4">
                             <div class="input-field col s12">
-                                <input id="name" name="name" type="text" value="{{$user->name}}" class="validate" required>
+                                <input id="name" name="name" type="text" value="{{$user->name}}" class="validate" required title="Nombre completo de usuario">
                                 <label for="name">Nombre completo</label>
                             </div>
                         </div>
                         <div class="col s12 m6 l4">
                             <div class="input-field col s12">
-                                <input id="nickname" name="nickname" type="text" value="{{$user->nickname}}" class="validate" required>
+                                <input id="nickname" name="nickname" type="text" value="{{$user->nickname}}" class="validate" required title="Nickname de usuario">
                                 <label for="nickname">Nombre de usuario</label>
                             </div>
                         </div>
                         <div class="col s12 m6 l4">
                             <div class="input-field col s12">
-                                <input id="email" name="email" type="email" value="{{$user->email}}" class="validate" required>
+                                <input id="email" name="email" type="email" value="{{$user->email}}" class="validate" required title="Correo electrónico de usuario">
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="col s12 m6 l4">
                             <div class="input-field col s12">
-                                <select id="role_id" name="role_id" required>
+                                <select id="role_id" name="role_id" required title="Rol de usuario dentro de la plataforma">
                                     <option value="0" disabled>Seleccione una opción</option>
                                     @foreach($roles as $r)
                                     <option value="{{$r->id}}" {{($user->role_id === $r->id) ? 'selected': ''}}>{{$r->role}}</option>
@@ -85,7 +85,7 @@
                     </div>
                     <div class="row">
                         <div class="col s12">
-                            <label for="chkPassword">Cambiar contraseña: </label>
+                            <label for="chkPassword" title="Cambiar contraseña">Cambiar contraseña: </label>
                             <div class="switch">
                                 <label>
                                     No
@@ -99,20 +99,20 @@
                     <div id="passSection" class="row">
                         <div class="col s12 m6 l4">
                             <div class="input-field col s12">
-                                <input id="password" type="password" class="validate">
+                                <input id="password" type="password" class="validate" title="Nueva contraseña">
                                 <label for="password">Nueva contraseña</label>
                             </div>
                         </div>
                         <div class="col s12 m6 l4">
                             <div class="input-field col s12">
-                                <input id="password2" type="password" class="validate">
+                                <input id="password2" type="password" class="validate" title="Repita la nueva contraseña">
                                 <label for="password2">Repita la nueva contraseña</label>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s12">
-                            <button type="button" id="btnSubmit" class="right btn waves-effect waves-light blue darken-1">Actualizar</button>
+                            <button type="button" id="btnSubmit" class="right btn waves-effect waves-light blue darken-1" title="Actualizar datos del usuario dentro de la plataforma">Actualizar</button>
                             <input type="submit" id="submit" hidden/>
                         </div>
                     </div>

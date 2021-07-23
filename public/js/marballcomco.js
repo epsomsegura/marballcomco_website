@@ -34,17 +34,21 @@ $(document).ready(function () {
         $('#carrusel_clientes').carousel('next');
         setTimeout(autoplay, 5000);
     }
-    mapboxgl.accessToken = 'pk.eyJ1Ijoic2ljYWYiLCJhIjoiY2tlazc1MHR1MW9tbDJyczQ2dWVoZTd4cCJ9.HouuJA-H1lLINchQBDmoew';
-    var map = new mapboxgl.Map({
-    container: 'map', // container id
-    style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center: [-96.925498, 19.565976], // starting position [lng, lat]
-    zoom: 15 // starting zoom
-    });
-    map.scrollZoom.disable();
-    map.addControl(new mapboxgl.NavigationControl());
-  
-    var marker = new mapboxgl.Marker().setLngLat([-96.925498, 19.565976]).addTo(map);
+
+    if($('#map').length>0){
+      mapboxgl.accessToken = 'pk.eyJ1Ijoic2ljYWYiLCJhIjoiY2tlazc1MHR1MW9tbDJyczQ2dWVoZTd4cCJ9.HouuJA-H1lLINchQBDmoew';
+      var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/mapbox/streets-v11', // style URL
+      center: [parseFloat($('#lng').val()), parseFloat($('#lat').val())], // starting position [lng, lat]
+      zoom: 15 // starting zoom
+      });
+      map.scrollZoom.disable();
+      map.addControl(new mapboxgl.NavigationControl());
+    
+      var marker = new mapboxgl.Marker().setLngLat([parseFloat($('#lng').val()), parseFloat($('#lat').val())]).addTo(map);
+    }
+
   
     var year = new Date().getFullYear();
     $('#year').html(year);
@@ -69,7 +73,7 @@ $(document).ready(function () {
   });
   
   $(document).on('click',
-  '#menu_options a[href*="#"],#footer_menu a[href*="#"], #mobile a#line_fx[href*="#"], a#btn_banner_more[href*="#"],a#scrollTopBtn[href*="#"],a#logo_menu[href*="#"],a#arrow_down_banner[href*="#"]',function() {
+  '#menu_options a[href*="#"],#footer_menu a[href*="#"], #mobile a#line_fx[href*="#"], a#btn_banner_more[href*="#"],a#scrollTopBtn[href*="#"],a#logo_menu[href*="#"],a#arrow_down_banner[href*="#"],#bannerLink',function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
         && location.hostname == this.hostname) {
   

@@ -6,7 +6,7 @@
                 <ul>
                     <li class="divider" tabindex="-1"></li>
                     <li><a href="{{url('/settings/textsAndLinks')}}">Textos y enlaces</a></li>
-                    <li><a href="#!">two</a></li>
+                    <li><a href="{{url('/settings/clients')}}">Clientes</a></li>
                     <li class="divider" tabindex="-1"></li>
                 </ul>
             </div>

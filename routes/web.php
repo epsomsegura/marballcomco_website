@@ -32,6 +32,15 @@ Route::group(['prefix'=>'/user','middleware'=>['auth']],function(){
 // Settings
 Route::group(['prefix'=>'/settings','middleware'=>['auth']],function(){
     // Texts and links
-    Route::get('/textsAndLinks',[LandingPage::class,'textSetings']);
+    Route::get('/textsAndLinks',[LandingPage::class,'textSettings']);
+    Route::put('/banner/{id}',[LandingPage::class,'bannerData']);
+    Route::put('/enterpriseIdentity/{id}',[LandingPage::class,'enterpriseIdentityData']);
+    Route::put('/productInfo/{id}',[LandingPage::class,'productInfoData']);
+    Route::put('/testimonial/{id}',[LandingPage::class,'testimonialData']);
+    Route::put('/contact/{id}',[LandingPage::class,'contactData']);
+    
+    // Clients
+    Route::get('/clients',[LandingPage::class,'clientsSettings']);
+    Route::post('/clients',[LandingPage::class,'saveClient']);
 });
 
